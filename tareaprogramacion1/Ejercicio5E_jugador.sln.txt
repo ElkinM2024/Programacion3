@@ -1,22 +1,48 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio5_jugador", "Ejercicio5_jugador.csproj", "{4696E190-C425-4EC3-A38B-3EF42BC76D28}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4696E190-C425-4EC3-A38B-3EF42BC76D28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4696E190-C425-4EC3-A38B-3EF42BC76D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4696E190-C425-4EC3-A38B-3EF42BC76D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4696E190-C425-4EC3-A38B-3EF42BC76D28}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
+
+Calculadora básica con switch
+        Console.WriteLine("\nIngrese el primer número:");
+        if (double.TryParse(Console.ReadLine(), out double numero1))
+        {
+            Console.WriteLine("Ingrese el segundo número:");
+            if (double.TryParse(Console.ReadLine(), out double numero2))
+            {
+                Console.WriteLine("Ingrese la operación a realizar (+, -, *, /):");
+                char operacion = Console.ReadKey().KeyChar;
+                Console.WriteLine();
+                switch (operacion)
+                {
+                    case '+':
+                        Console.WriteLine($"Resultado: {numero1 + numero2}");
+                        break;
+                    case '-':
+                        Console.WriteLine($"Resultado: {numero1 - numero2}");
+                        break;
+                    case '*':
+                        Console.WriteLine($"Resultado: {numero1 * numero2}");
+                        break;
+                    case '/':
+                        if (numero2 != 0)
+                        {
+                            Console.WriteLine($"Resultado: {numero1 / numero2}");
+                        }
+                        else
+ {
+                            Console.WriteLine("No se puede dividir entre cero.");
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Operación inválida.");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Entrada inválida para el segundo número.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Entrada inválida para el primer número.");
+        }
+    }
+}
