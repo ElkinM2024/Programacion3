@@ -1,22 +1,35 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio4_piedra_papel_tijera", "Ejercicio4_piedra_papel_tijera.csproj", "{44828536-86EF-475B-926C-CBBB16C06682}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{44828536-86EF-475B-926C-CBBB16C06682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44828536-86EF-475B-926C-CBBB16C06682}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44828536-86EF-475B-926C-CBBB16C06682}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44828536-86EF-475B-926C-CBBB16C06682}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
+Día de la semana
+        Console.WriteLine("\nIngrese un número del 1 al 7 para obtener el día de la semana:");
+        if (int.TryParse(Console.ReadLine(), out int diaSemana) && diaSemana >= 1 && diaSemana <= 7)
+        {
+            switch (diaSemana)
+            {
+                case 1:
+                    Console.WriteLine("Lunes");
+                    break;
+                case 2:
+                    Console.WriteLine("Martes");
+                    break;
+                case 3:
+                    Console.WriteLine("Miércoles");
+                    break;
+                case 4:
+                    Console.WriteLine("Jueves");
+                    break;
+                case 5:
+                    Console.WriteLine("Viernes");
+                    break;
+                case 6:
+                    Console.WriteLine("Sábado");
+                    break;
+                case 7:
+                    Console.WriteLine("Domingo");
+                    break;
+           }
+        }
+        else
+        {
+            Console.WriteLine("Número fuera de rango o entrada inválida.");
+        }
+
+
